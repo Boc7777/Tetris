@@ -26,7 +26,7 @@ public:
 
 
 	virtual void movement_X() = 0;
-	virtual void rotate() = 0; 
+	virtual void rotate() = 0;
 };
 
 

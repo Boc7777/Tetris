@@ -36,5 +36,7 @@ private:
 	float cell_size;
 	Color color;
 
+	bool rotate_checker;
+	int rotate_number;
 };
 

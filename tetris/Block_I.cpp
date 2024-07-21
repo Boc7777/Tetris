@@ -9,6 +9,9 @@ Block_I::Block_I(float _cell_size, Color _color, RenderWindow* _window, vector<T
 	color = _color;
 	spawnCells();
 	createShape();
+	
+	rotate_checker = false;
+	rotate_number = 1;
 
 }
 
@@ -24,6 +27,7 @@ void Block_I::createShape() {
 	mini_cells_tab[2].setPosition(Vector2f(cell_size * 5, cell_size * -2));
 	mini_cells_tab[3].setPosition(Vector2f(cell_size * 5, cell_size * -1));
 }
+
 
 void Block_I::checkUnderCells() {
 	for (auto& internal_cell : mini_cells_tab) {
@@ -51,8 +55,6 @@ void Block_I::checkUnderCells() {
 }
 
 
-
-
 void Block_I::checkUnderControl() {
 	for (auto& cell : mini_cells_tab) {
 		if (!cell.get_underControl()) {
@@ -62,8 +64,6 @@ void Block_I::checkUnderControl() {
 		}
 	}
 }
-
-
 
 vector<Cell> Block_I::getTabCells() {
 	return mini_cells_tab;
@@ -84,9 +84,10 @@ void Block_I::drawCells() {
 }
 
 
+
 void Block_I::movement_X(){
 
-	if (Keyboard::isKeyPressed(Keyboard::Key::A)){
+	if (Keyboard::isKeyPressed(Keyboard::Key::Left)){
 		bool possible_move = true;
 
 		for (auto& cell : mini_cells_tab) {
@@ -123,7 +124,7 @@ void Block_I::movement_X(){
 
 	}
 
-	else if (Keyboard::isKeyPressed(Keyboard::Key::D)) {
+	else if (Keyboard::isKeyPressed(Keyboard::Key::Right)) {
 		bool possible_move = true;
 
 		for (auto& cell : mini_cells_tab) {
@@ -161,5 +162,94 @@ void Block_I::movement_X(){
 }
 
 void Block_I::rotate(){
+	
+	if (Keyboard::isKeyPressed(Keyboard::Key::Up) && !rotate_checker) {
+		rotate_checker = true;
+		rotate_number += 1;
+		if (rotate_number > 2) {
+			rotate_number = 1;
+		}
+		
 
+		//stojacy 
+		if (rotate_number == 1) {
+			float main_x = mini_cells_tab[0].getPosition().x;
+			float main_y = mini_cells_tab[0].getPosition().y;
+			bool possible_rotate = true;
+
+			
+			for (int i = 1; i < 4;i++) {
+
+				float actual_y = main_y - i * cell_size;
+				float actual_x = main_x;
+
+				//sprawdzanie czy rotate wchodzi w inne komorki
+				for (TetrisBlock* block : blocks_tab) {
+					for (auto& external_cell : block->getTabCells()) {
+						
+						if (actual_y == external_cell.getPosition().y && actual_x == external_cell.getPosition().x) {
+							possible_rotate = false;
+						 }
+					}
+				}
+			}
+
+			if (possible_rotate) {
+				for (int i = 1; i < 4;i++) {
+					mini_cells_tab[i].setPosition(Vector2f(main_x, main_y - i * cell_size));
+				}
+			}
+			else {
+				rotate_number -= 1;
+			}
+
+
+		}
+
+		//lezacy
+		else if (rotate_number == 2) {
+
+			float main_x = mini_cells_tab[0].getPosition().x;
+			float main_y = mini_cells_tab[0].getPosition().y;
+			bool possible_rotate = true;
+
+			for (int i = 1; i < 4;i++) {
+				float actual_y = main_y;
+				float actual_x = main_x + i * cell_size;
+
+				if (actual_x > cell_size * 9) {
+					possible_rotate = false;
+				}
+
+
+
+				for (TetrisBlock* block : blocks_tab) {
+					for (auto& external_cell : block->getTabCells()) {
+
+						if (actual_y == external_cell.getPosition().y && actual_x == external_cell.getPosition().x) {
+							possible_rotate = false;
+						}
+					}
+				}
+			}
+
+
+
+
+
+			if (possible_rotate) {
+				for (int i = 1; i < 4;i++) {
+					mini_cells_tab[i].setPosition(Vector2f(main_x + i * cell_size, main_y));
+				}
+			}
+			else {
+				rotate_number -= 1;
+			}
+
+		}
+
+	}
+	if(!Keyboard::isKeyPressed(Keyboard::Key::Up)) {
+		rotate_checker = false;
+	}
 }

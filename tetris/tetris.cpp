@@ -60,29 +60,34 @@ int main()
             }
         }
 
-
+        //jezeli jakis upadł generuje sie nastepny 
         if (Check_generate_moment()) {
             blocks_tab.push_back( new Block_I(cell_size, Color::Red, &window, blocks_tab));   
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 250) {
+        if (Move_Y_timer.asMilliseconds() >= 100) {
 
             for (TetrisBlock* block : blocks_tab) {
-                block->movement_X();
-                block->checkUnderCells();
-                block->moveDownCells();
+                    block->movement_X();
+                    block->checkUnderCells();
+                    block->moveDownCells();
                
             }
             clock_Y.restart();
         }
 
         //poruszanie prawo lewo 
-        if (Move_X_timer.asMilliseconds() >= 150) {
+        if (Move_X_timer.asMilliseconds() >= 50) {
             for (TetrisBlock* block : blocks_tab) {
-                block->movement_X();
+                    block->movement_X();
             }
             clock_X.restart();
+        }
+
+        //rotejtowanie
+        for (TetrisBlock* block : blocks_tab) {
+                block->rotate();
         }
 
         //rysowanie 
