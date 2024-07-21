@@ -2,12 +2,15 @@
 #include <iostream>
 #include "Board.h"
 #include "Block_I.h"
+#include "Block_O.h"
 #include "TetrisBlock.h"
+#include <cstdlib>
 
 using namespace sf;
 using namespace std;
 
 const float cell_size = 40.f;
+const int amount_of_blocks = 2;
 
 unsigned display_width = cell_size*15.f; 
 unsigned display_height = cell_size*20.f;
@@ -27,6 +30,17 @@ bool Check_generate_moment() {
     return true;
 }
 
+void Generate_random_block(RenderWindow* window) {
+    int i = rand() % amount_of_blocks;
+    if (i == 0) {
+        blocks_tab.push_back(new Block_I(cell_size, Color::Yellow, window, blocks_tab));
+    }
+    else if (i == 1) {
+        blocks_tab.push_back(new Block_O(cell_size, Color::Cyan, window, blocks_tab));
+    }
+}
+
+
 int main()
 {
     RenderWindow window(VideoMode(display_width, display_height), "TETRIS");
@@ -35,14 +49,11 @@ int main()
     Clock clock_X;
     Clock clock_Y;
 
-    
+    srand(time(0));
     Event event;
 
     Board board(cell_size * 10, cell_size * 20);
 
-    
-    Block_I block_I(cell_size, Color::Red, &window, blocks_tab);
-    blocks_tab.push_back(&block_I);
 
     while (window.isOpen()) {
 
@@ -62,11 +73,11 @@ int main()
 
         //jezeli jakis upadł generuje sie nastepny 
         if (Check_generate_moment()) {
-            blocks_tab.push_back( new Block_I(cell_size, Color::Red, &window, blocks_tab));   
+            Generate_random_block(&window);
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 100) {
+        if (Move_Y_timer.asMilliseconds() >= 200) {
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
@@ -78,11 +89,13 @@ int main()
         }
 
         //poruszanie prawo lewo 
-        if (Move_X_timer.asMilliseconds() >= 50) {
+        if (Move_X_timer.asMilliseconds() >= 300 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) )){
+
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
             }
             clock_X.restart();
+            cout << Move_X_timer.asMilliseconds() << "\n";
         }
 
         //rotejtowanie
@@ -99,4 +112,6 @@ int main()
         
     }
 }
+
+
 
