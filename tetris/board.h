@@ -14,8 +14,13 @@ public:
 	
 private:
 	RenderWindow* window;
-	RectangleShape shape;
-	RectangleShape siema; 
+
+	Sprite shape; 
+	Texture texture_board;
+	Sprite rightPanel;
+	Texture texture_rightPanel;
+	
+
 	Text score_text;
 	Text level_text;
 	Font font;
@@ -23,7 +28,6 @@ private:
 	float cell_size;
 	int score;
 	int level;
-	/*float time;*/
 
 	void draw(RenderTarget& target, RenderStates state) const override;
 };

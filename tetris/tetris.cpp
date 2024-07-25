@@ -88,10 +88,10 @@ void Generate_random_block(RenderWindow* window, Board board) {
 
     int i = rand() % amount_of_blocks;
     if (i == 0) {
-        blocks_tab.push_back(new Block_I(cell_size, Color::Yellow, window, blocks_tab));
+        blocks_tab.push_back(new Block_I(cell_size, Color::Blue, window, blocks_tab));
     }
     else if (i == 1) {
-        blocks_tab.push_back(new Block_O(cell_size, Color::Cyan, window, blocks_tab));
+        blocks_tab.push_back(new Block_O(cell_size, Color::Green, window, blocks_tab));
     }
 }
 

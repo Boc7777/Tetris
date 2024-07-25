@@ -79,7 +79,6 @@ vector<Cell>& Block_I::getTabCells() {
 }
 
 void Block_I::deleteCellFromTab(int index) {
-	/*mini_cells_tab.erase(mini_cells_tab.begin()+index );*/
 	mini_cells_tab[index].set_toDelete();
 }
 

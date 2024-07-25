@@ -6,15 +6,23 @@
 
 
 Board::Board(float weight, float height, float _cell_size, RenderWindow* _window) {
-	shape.setSize(Vector2f(weight, height));
+	/*shape.setSize(Vector2f(weight, height));
 	shape.setFillColor(Color(128, 128, 128));
 	shape.setOutlineThickness(4.f);
-	shape.setOutlineColor(Color::White);
+	shape.setOutlineColor(Color::White);*/
+
+	texture_board.loadFromFile("background.png");
+	shape.setTexture(texture_board);
+
+	texture_rightPanel.loadFromFile("RightPanel.png");
+	rightPanel.setTexture(texture_rightPanel);
+	
+
 	cell_size = _cell_size;
 	window = _window;
 
 	
-	font.loadFromFile("C:\\Users\\48664\\Desktop\\tetris\\tetris\\czcionka.ttf");
+	font.loadFromFile("czcionka.ttf");
 
 	score_text.setFont(font);
 	score_text.setCharacterSize(30);
@@ -46,6 +54,9 @@ void Board::DrawRightPanel() {
 	level_text.setString( "LEVEL: "+ to_string(level));
 	level_text.setOrigin(level_text.getLocalBounds().width / 2, level_text.getLocalBounds().height / 2);
 
+	rightPanel.setPosition(Vector2f(10 * cell_size, 0));
+
+	window->draw(rightPanel);
 	window->draw(score_text);
 	window->draw(level_text);
 }

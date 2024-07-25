@@ -26,7 +26,8 @@ public:
 	void setPosition(Vector2f position);
 
 private:
-	RectangleShape shape; 
+	Sprite shape; 
+	Texture texture;
 	bool underControl;
 	bool toDelete;
 
