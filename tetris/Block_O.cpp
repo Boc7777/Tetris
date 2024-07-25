@@ -70,8 +70,13 @@ void Block_O::checkUnderControl() {
 	}
 }
 
-vector<Cell> Block_O::getTabCells() {
+vector<Cell>& Block_O::getTabCells() {
 	return mini_cells_tab;
+}
+
+void Block_O::deleteCellFromTab(int index) {
+	/*mini_cells_tab.erase(mini_cells_tab.begin() + index);*/
+	mini_cells_tab[index].set_toDelete();
 }
 
 

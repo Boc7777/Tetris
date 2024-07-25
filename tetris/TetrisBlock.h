@@ -21,12 +21,14 @@ public:
 
 	virtual void drawCells() = 0;
 
-	virtual vector<Cell> getTabCells() = 0;
+	virtual vector<Cell>& getTabCells() = 0;
 	virtual void checkUnderControl() = 0;
-
+	
 
 	virtual void movement_X() = 0;
 	virtual void rotate() = 0;
+
+	virtual void deleteCellFromTab(int index) = 0;
 };
 
 

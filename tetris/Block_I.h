@@ -17,8 +17,8 @@ public:
 
 	void checkUnderCells() override;
 	void checkUnderControl() override;
-	vector<Cell> getTabCells() override;
-
+	vector<Cell>& getTabCells() override;
+	void deleteCellFromTab(int index) override;
 
 	void moveDownCells() override;
 	void movement_X() override;
