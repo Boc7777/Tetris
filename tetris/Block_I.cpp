@@ -83,6 +83,7 @@ void Block_I::deleteCellFromTab(int index) {
 }
 
 
+
 void Block_I::moveDownCells() {
 	for (auto& cell : mini_cells_tab) {
 		cell.moveDown();

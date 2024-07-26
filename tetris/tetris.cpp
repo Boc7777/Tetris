@@ -20,7 +20,19 @@ int score = 0;
 
 vector<int> cells_in_rows;
 
-void Check_line() {
+bool game_on = true;
+
+void Check_game_over() {
+    for (TetrisBlock* block : blocks_tab) {
+        for (auto& external_cell : block->getTabCells()) {
+            if (!external_cell.get_underControl() && external_cell.getPosition().y < 0) {
+                game_on = false;
+            }
+        }
+    }
+}
+
+void Check_line(Board &board) {
     cells_in_rows.clear();
 
     for (int i = 0; i < 20;i++) {
@@ -29,7 +41,9 @@ void Check_line() {
  
     for (TetrisBlock* block : blocks_tab) {
         for (auto& external_cell : block->getTabCells()) {
-            cells_in_rows[external_cell.getPosition().y / cell_size] += 1;
+            if (external_cell.getPosition().y / cell_size >= 0) {
+                cells_in_rows[external_cell.getPosition().y / cell_size] += 1;
+            }
         }
     }
 
@@ -38,6 +52,7 @@ void Check_line() {
         if (row == 10) {
             float yToDelete = index * cell_size;
             score += 10;
+            board.updateData(score);
             
 
             for (int i = 0;i < blocks_tab.size();i++) {
@@ -45,10 +60,6 @@ void Check_line() {
                 vector<Cell> &mini_blocks_tab = blocks_tab[i]->getTabCells();
                 for (auto& external_cell : mini_blocks_tab) {
                     if (external_cell.getPosition().y == yToDelete) {
-                        
-                        
-                      /*  blocks_tab[i]->deleteCellFromTab(b);
-                        b -= 1;*/
                         external_cell.set_toDelete();
 
                     }
@@ -83,8 +94,6 @@ bool Check_generate_moment() {
 }
 
 void Generate_random_block(RenderWindow* window, Board board) {
-    //sprawdzanie czy linia jest ulozona 
-    Check_line();
 
     int i = rand() % amount_of_blocks;
     if (i == 0) {
@@ -107,12 +116,14 @@ int main()
     srand(time(0));
     Event event;
 
-    Board board(cell_size * 10, cell_size * 20,cell_size,&window);
+    Board board(cell_size,&window);
 
-    while (window.isOpen()) {
+    while (window.isOpen() ) {
 
         window.clear(Color::Black);
+        //rysowanie boarda i drawRightPanel
         window.draw(board);
+        board.DrawRightPanel();
 
         Time Move_X_timer = clock_X.getElapsedTime();
         Time Move_Y_timer = clock_Y.getElapsedTime();
@@ -125,14 +136,22 @@ int main()
             }
         }
 
-        //jezeli jakis upadł generuje sie nastepny 
-        if (Check_generate_moment()) {
+        //jezeli jakis upadł generuje sie nastepny i sprawdzana jest linia i game over 
+        if (Check_generate_moment() && game_on) {
+
+            //sprawdzanie czy linia do usuniecia
+            Check_line(board);
+
+            //generowanie nastepnego bloku
             Generate_random_block(&window, board);
-            board.updateData(score);
+            
+            //sprawdzanie czy gracz nie przegrał
+            Check_game_over();
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 100 - board.getLevel()*10 ) {
+        //spadanie
+        if (Move_Y_timer.asMilliseconds() >= 100 - board.getLevel()*10 && game_on) {
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
@@ -145,7 +164,7 @@ int main()
         }
 
         //poruszanie prawo lewo 
-        if (Move_X_timer.asMilliseconds() >= 300 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) )){
+        if (Move_X_timer.asMilliseconds() >= 500 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
@@ -155,15 +174,26 @@ int main()
 
         //rotejtowanie
         for (TetrisBlock* block : blocks_tab) {
+            if (game_on) {
                 block->rotate();
+            }
         }
 
         //rysowanie 
         for (TetrisBlock* block : blocks_tab) {
             block->drawCells();
         }
-        board.DrawRightPanel();
      
+        if (!game_on) {
+            board.DrawGameOver();
+
+            if (Keyboard::isKeyPressed(Keyboard::Enter)) {
+                board.updateData(0);
+                blocks_tab.clear();
+                game_on = true;
+            }
+        }
+
         window.display();
         
     }
