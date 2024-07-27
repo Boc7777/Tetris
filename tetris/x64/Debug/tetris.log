@@ -1,10 +1,1 @@
-﻿  tetris.cpp
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(14,24): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(15,25): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(45,61): warning C4244: "argument": konwersja z "T" do "const unsigned __int64", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(45,61): warning C4244:         with
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(45,61): warning C4244:         [
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(45,61): warning C4244:             T=float
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(45,61): warning C4244:         ]
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(116,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-  tetris.vcxproj -> C:\Users\48664\Desktop\tetris\x64\Debug\tetris.exe
+﻿  tetris.vcxproj -> C:\Users\48664\Desktop\tetris\x64\Debug\tetris.exe

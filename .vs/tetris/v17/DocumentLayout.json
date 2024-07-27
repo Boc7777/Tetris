@@ -79,7 +79,7 @@
               "RelativeDocumentMoniker": "tetris\\tetris.cpp",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\tetris.cpp",
               "RelativeToolTip": "tetris\\tetris.cpp",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAvwHsAAAArAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-16T09:20:03.285Z",
               "EditorCaption": ""
@@ -94,8 +94,7 @@
               "RelativeToolTip": "tetris\\TetrisBlock.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-26T08:32:02.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T08:32:02.217Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "tetris\\TetrisBlock.h",
               "ViewState": "AQIAAAcAAAAAAAAAAAAswCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-11T16:25:39.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T16:25:39.419Z"
             },
             {
               "$type": "Document",
@@ -144,8 +142,7 @@
               "RelativeToolTip": "tetris\\Block_I.cpp",
               "ViewState": "AQIAACcAAAAAAAAAAAAswFwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-07T08:59:21.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T08:59:21.126Z"
             },
             {
               "$type": "Document",
@@ -157,8 +154,7 @@
               "RelativeToolTip": "tetris\\Block_I.h",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-07T08:44:21.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T08:44:21.844Z"
             },
             {
               "$type": "Document",
@@ -182,8 +178,7 @@
               "RelativeToolTip": "tetris\\Block_O.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-21T15:44:13.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T15:44:13.589Z"
             },
             {
               "$type": "Document",
@@ -208,8 +203,7 @@
               "RelativeToolTip": "tetris\\board.h",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-06T14:54:54.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T14:54:54.281Z"
             }
           ]
         },

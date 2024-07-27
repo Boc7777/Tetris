@@ -28,6 +28,7 @@ void Check_game_over() {
             if (!external_cell.get_underControl() && external_cell.getPosition().y < 0) {
                 game_on = false;
             }
+
         }
     }
 }
