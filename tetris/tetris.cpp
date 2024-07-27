@@ -104,7 +104,6 @@ void Generate_random_block(RenderWindow* window, Board board) {
     }
 }
 
-
 int main()
 {
     RenderWindow window(VideoMode(display_width, display_height), "TETRIS");
@@ -150,14 +149,13 @@ int main()
         }
 
         //spadanie
-        //spadanie
         if (Move_Y_timer.asMilliseconds() >= 100 - board.getLevel()*10 && game_on) {
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
                     block->checkUnderCells();
                     block->moveDownCells();
-               
+                   /* block->siema();*/
             }
             clock_Y.restart();
   

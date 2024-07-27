@@ -10,25 +10,29 @@ using namespace std;
 class TetrisBlock 
 {
 public:
-	
+	// ---------------- metody wbudowane ----------------	
+	void spawnCells();
+	void drawCells();
+	void checkUnderControl();
+	void moveDownCells();
+	void movement_X();
+	void checkUnderCells();
+	void deleteCellFromTab(int index);
 
-	virtual void spawnCells() = 0;
+
+	// ---------------- metody indywidualne  ----------------	
 	virtual void createShape() = 0;
-
-
-	virtual void checkUnderCells() = 0;
-	virtual void moveDownCells() = 0;
-
-	virtual void drawCells() = 0;
-
-	virtual vector<Cell>& getTabCells() = 0;
-	virtual void checkUnderControl() = 0;
-	
-
-	virtual void movement_X() = 0;
 	virtual void rotate() = 0;
 
-	virtual void deleteCellFromTab(int index) = 0;
+
+	// ---------------- getery i setery ----------------
+	virtual RenderWindow* getWindow() = 0;
+	virtual vector<TetrisBlock*> getTabBloks() = 0;
+	virtual vector<Cell>& getTabCells() = 0;
+	virtual float getCellSize() = 0;
+	virtual void setBlockUnderControl(bool _bool) = 0;
+	virtual Color getColor() = 0;
+
 };
 
 

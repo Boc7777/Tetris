@@ -9,7 +9,6 @@ class Cell :public Drawable
 {
 public:
 	Cell(float position_x, float position_y, float size, Color color);
-	/*~Cell();*/
 
 	bool get_underControl();
 	void set_underConrol(bool x);

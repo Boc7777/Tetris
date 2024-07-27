@@ -11,19 +11,17 @@ class Block_O :public TetrisBlock
 public:
 	Block_O(float _cell_size, Color _color, RenderWindow* _window, vector<TetrisBlock*> blocks_tab);
 
-	void spawnCells() override;
+
 	void createShape() override;
-	void drawCells() override;
-
-	void checkUnderCells() override;
-	void checkUnderControl() override;
-	vector<Cell>& getTabCells() override;
-	void deleteCellFromTab(int index) override;
-
-
-	void moveDownCells() override;
-	void movement_X() override;
 	void rotate() override;
+
+
+	RenderWindow* getWindow() override;
+	vector<TetrisBlock*> getTabBloks() override;
+	vector<Cell>& getTabCells() override;
+	float getCellSize() override;
+	void setBlockUnderControl(bool _bool) override;
+	Color getColor() override;
 
 private:
 	RectangleShape shape;
@@ -35,6 +33,11 @@ private:
 	string type;
 	float cell_size;
 	Color color;
+
+	bool rotate_checker;
+	int rotate_number;
+
+	bool block_under_control;
 };
 
 

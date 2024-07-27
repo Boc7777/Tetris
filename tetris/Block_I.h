@@ -11,18 +11,17 @@ class Block_I :public TetrisBlock
 public:
 	Block_I(float _cell_size, Color _color, RenderWindow* _window, vector<TetrisBlock*> blocks_tab);
 
-	void spawnCells() override;
+	
 	void createShape() override;
-	void drawCells() override;
+   	void rotate() override;
 
-	void checkUnderCells() override;
-	void checkUnderControl() override;
+
+	RenderWindow* getWindow() override;
+    vector<TetrisBlock*> getTabBloks() override;
 	vector<Cell>& getTabCells() override;
-	void deleteCellFromTab(int index) override;
-
-	void moveDownCells() override;
-	void movement_X() override;
-	void rotate() override;
+	float getCellSize() override;
+	void setBlockUnderControl(bool _bool) override;
+	Color getColor() override;
 
 private:
 	RectangleShape shape;

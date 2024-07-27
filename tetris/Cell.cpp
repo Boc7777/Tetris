@@ -39,6 +39,7 @@ void Cell::set_underConrol(bool x) {
 	underControl = x;
 }
 
+
 void Cell::set_toDelete() {
 	toDelete = true;
 }
