@@ -7,11 +7,10 @@ using namespace sf;
 class Board :public Drawable
 {
 public:
-	Board(float _cell_size, RenderWindow* _window);
+	Board(float weight, float height,float _cell_size, RenderWindow* _window);
 	void updateData(int _score);
 	void DrawRightPanel();
 	int getLevel();
-	void DrawGameOver();
 	
 private:
 	RenderWindow* window;
@@ -20,9 +19,8 @@ private:
 	Texture texture_board;
 	Sprite rightPanel;
 	Texture texture_rightPanel;
-	Sprite gameover;
-	Texture texture_gameover;
 	
+
 	Text score_text;
 	Text level_text;
 	Font font;
