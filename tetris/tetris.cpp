@@ -1,16 +1,20 @@
 ﻿#include "SFML/Graphics.hpp"
 #include <iostream>
+#include <cstdlib>
 #include "Board.h"
 #include "Block_I.h"
 #include "Block_O.h"
 #include "Block_T.h"
-#include <cstdlib>
+#include "Block_L.h"
+#include "Block_J.h"
+#include "Block_Z.h"
+#include "Block_S.h"
+
 
 using namespace sf;
 using namespace std;
 
 const float cell_size = 40.f;
-const int amount_of_blocks = 3;
 
 unsigned display_width = cell_size*15.f; 
 unsigned display_height = cell_size*20.f;
@@ -96,15 +100,27 @@ bool Check_generate_moment() {
 
 void Generate_random_block(RenderWindow* window, Board board) {
 
-    int i = rand() % amount_of_blocks;
+    int i = rand() % 7;
     if (i == 0) {
-        /*blocks_tab.push_back(new Block_I(cell_size, Color::Blue, window, blocks_tab));*/
+        blocks_tab.push_back(new Block_I(cell_size, Color::Blue, window, blocks_tab));
     }
     else if (i == 1) {
-       /* blocks_tab.push_back(new Block_O(cell_size, Color::Green, window, blocks_tab));*/
+        blocks_tab.push_back(new Block_O(cell_size, Color::Green, window, blocks_tab));
     }
     else if (i == 2) {
         blocks_tab.push_back(new Block_T(cell_size, Color::Magenta, window, blocks_tab));
+    }
+    else if (i == 3) {
+        blocks_tab.push_back(new Block_L(cell_size, Color::Cyan, window, blocks_tab));
+    }
+    else if (i == 4) {
+        blocks_tab.push_back(new Block_J(cell_size, Color::Red, window, blocks_tab));
+    }
+    else if (i == 5) {
+        blocks_tab.push_back(new Block_Z(cell_size, Color::Yellow, window, blocks_tab));
+    }
+    else if (i == 6) {
+        blocks_tab.push_back(new Block_S(cell_size, Color::Black, window, blocks_tab));
     }
 }
 
@@ -139,6 +155,7 @@ int main()
             }
         }
 
+
         //jezeli jakis upadł generuje sie nastepny i sprawdzana jest linia i game over 
         if (Check_generate_moment() && game_on) {
 
@@ -153,7 +170,7 @@ int main()
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 150 - board.getLevel()*10 && game_on) {
+        if (Move_Y_timer.asMilliseconds() >= 200 - board.getLevel()*10 && game_on) {
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();
@@ -165,7 +182,7 @@ int main()
         }
 
         //poruszanie prawo lewo 
-        if (Move_X_timer.asMilliseconds() >= 500 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
+        if (Move_X_timer.asMilliseconds() >= 300 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
 
             for (TetrisBlock* block : blocks_tab) {
                     block->movement_X();

@@ -46,7 +46,7 @@ void Block_T::rotate() {
 				
 				vector<Vector2f> cells_to_check;
 
-				cells_to_check.push_back( Vector2f(main_x , main_y) );
+				cells_to_check.push_back(Vector2f(main_x , main_y) );
 				cells_to_check.push_back(Vector2f(main_x + cell_size , main_y ));
 				cells_to_check.push_back(Vector2f(main_x + 2*cell_size, main_y ));
 				cells_to_check.push_back(Vector2f(main_x + cell_size, main_y + cell_size));

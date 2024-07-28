@@ -1,20 +1,15 @@
-﻿  Block_I.cpp
-  Block_O.cpp
-  Block_T.cpp
-  Board.cpp
-  TetrisBlock.cpp
-  tetris.cpp
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(15,24): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(16,25): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(46,61): warning C4244: "argument": konwersja z "T" do "const unsigned __int64", możliwa utrata danych
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(46,61): warning C4244:         with
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(46,61): warning C4244:         [
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(46,61): warning C4244:             T=float
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(46,61): warning C4244:         ]
-C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(119,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+﻿  tetris.cpp
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(19,24): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(20,25): warning C4244: "inicjowanie": konwersja z "float" do "unsigned int", możliwa utrata danych
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(50,61): warning C4244: "argument": konwersja z "T" do "const unsigned __int64", możliwa utrata danych
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(50,61): warning C4244:         with
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(50,61): warning C4244:         [
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(50,61): warning C4244:             T=float
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(50,61): warning C4244:         ]
+C:\Users\48664\Desktop\tetris\tetris\tetris.cpp(135,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   Trwa generowanie kodu
-  37 of 419 functions ( 8.8%) were compiled, the rest were copied from previous compilation.
-    16 functions were new in current compilation
-    37 functions had inline decision re-evaluated but remain unchanged
+  1 of 491 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   tetris.vcxproj -> C:\Users\48664\Desktop\tetris\x64\Release\tetris.exe

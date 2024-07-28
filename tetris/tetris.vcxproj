@@ -139,8 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block_J.cpp" />
+    <ClCompile Include="Block_L.cpp" />
     <ClCompile Include="Block_O.cpp" />
+    <ClCompile Include="Block_S.cpp" />
     <ClCompile Include="Block_T.cpp" />
+    <ClCompile Include="Block_Z.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Block_I.cpp" />
@@ -148,8 +152,12 @@
     <ClCompile Include="TetrisBlock.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Block_J.h" />
+    <ClInclude Include="Block_L.h" />
     <ClInclude Include="Block_O.h" />
+    <ClInclude Include="Block_S.h" />
     <ClInclude Include="Block_T.h" />
+    <ClInclude Include="Block_Z.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Block_I.h" />

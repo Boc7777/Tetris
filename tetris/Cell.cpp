@@ -24,6 +24,9 @@ Cell::Cell(float position_x, float position_y, float size, Color color){
 	else if (color == Color::Magenta) {
 		texture.loadFromFile("Blocks\\purple_cell.png");
 	}
+	else if (color == Color::Black) {
+		texture.loadFromFile("Blocks\\darkBlue_cell.png");
+	}
 	
 	underControl = true;
 	cellSize = size;
