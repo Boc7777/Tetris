@@ -23,12 +23,17 @@ public:
 	void setBlockUnderControl(bool _bool) override;
 	Color getColor() override;
 
+	Vector2f& GetBlockPosition() override;
+	void setBlockPosition(Vector2f position) override;
+
 private:
 	RectangleShape shape;
 	RenderWindow* window;
 
 	vector<TetrisBlock*> blocks_tab;
 	vector<Cell> mini_cells_tab;
+
+	Vector2f blockPosition;
 
 	string type;
 	float cell_size;

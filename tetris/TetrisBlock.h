@@ -18,6 +18,8 @@ public:
 	void movement_X();
 	void checkUnderCells();
 	void deleteCellFromTab(int index);
+	bool borderChecker(Vector2f position);
+	bool colisionChecker(vector<Vector2f> cells_to_check, vector<TetrisBlock*> blocks_tab);
 
 
 	// ---------------- metody indywidualne  ----------------	
@@ -32,6 +34,9 @@ public:
 	virtual float getCellSize() = 0;
 	virtual void setBlockUnderControl(bool _bool) = 0;
 	virtual Color getColor() = 0;
+
+	virtual Vector2f& GetBlockPosition() = 0;
+	virtual void setBlockPosition(Vector2f position) = 0;
 
 };
 

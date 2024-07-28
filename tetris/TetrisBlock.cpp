@@ -28,6 +28,7 @@ void TetrisBlock::moveDownCells() {
 	for (auto& cell : getTabCells()) {
 		cell.moveDown();
 	}
+	setBlockPosition(Vector2f(GetBlockPosition().x, GetBlockPosition().y + getCellSize()));
 }
 
 void TetrisBlock::movement_X() {
@@ -65,6 +66,7 @@ void TetrisBlock::movement_X() {
 			for (auto& cell : getTabCells()) {
 				cell.moveLeft();
 			}
+			setBlockPosition(Vector2f(GetBlockPosition().x - getCellSize(), GetBlockPosition().y));
 		}
 
 	}
@@ -102,6 +104,7 @@ void TetrisBlock::movement_X() {
 			for (auto& cell : getTabCells()) {
 				cell.moveRight();
 			}
+			setBlockPosition(Vector2f(GetBlockPosition().x + getCellSize(), GetBlockPosition().y));
 		}
 	}
 }
@@ -133,4 +136,29 @@ void TetrisBlock::checkUnderCells() {
 
 void TetrisBlock::deleteCellFromTab(int index) {
 	getTabCells()[index].set_toDelete();
+}
+
+bool TetrisBlock::borderChecker(Vector2f position) { 
+	if (position.x < 0 || position.x > 9 * getCellSize()) {
+		return false;
+	}
+	if (position.y > 19 * getCellSize()) {
+		return false;
+	}
+	return true;
+}
+
+bool TetrisBlock::colisionChecker(vector<Vector2f> cells_to_check, vector<TetrisBlock*> blocks_tab)
+{
+	for (TetrisBlock* block : blocks_tab) {
+		for (auto& external_cell : block->getTabCells()) {
+			for (auto& blockCheck : cells_to_check) {
+
+				if (external_cell.getPosition() == blockCheck) {
+					return false;
+				}
+			}
+		}
+	}
+	return true;
 }

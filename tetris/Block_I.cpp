@@ -23,6 +23,8 @@ void Block_I::createShape() {
 	mini_cells_tab[1].setPosition(Vector2f(cell_size * 5, cell_size * -3));
 	mini_cells_tab[2].setPosition(Vector2f(cell_size * 5, cell_size * -2));
 	mini_cells_tab[3].setPosition(Vector2f(cell_size * 5, cell_size * -1));
+
+	setBlockPosition(mini_cells_tab[0].getPosition());
 }
 
 void Block_I::rotate(){
@@ -145,4 +147,12 @@ void Block_I::setBlockUnderControl(bool _bool) {
 
 Color Block_I::getColor(){
 	return color;
+}
+
+Vector2f& Block_I::GetBlockPosition() {
+	return blockPosition;
+}
+
+void Block_I::setBlockPosition(Vector2f position) {
+	blockPosition = position;
 }

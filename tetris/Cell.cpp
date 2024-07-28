@@ -5,17 +5,24 @@ using namespace std;
 
 Cell::Cell(float position_x, float position_y, float size, Color color){
 	shape.setPosition(Vector2f(position_x, position_y));
-	/*shape.setFillColor(color);
-	shape.setSize(Vector2f(size, size));*/
-	
-	/*shape.setOutlineThickness(1.f);*/
-	/*shape.setOutlineColor(Color::Black);*/
 
-	if (color == Color::Green) {
-		texture.loadFromFile("Blocks\\green_block.png");
+	if (color == Color::Blue) {
+		texture.loadFromFile("Blocks\\blue_cell.png");
 	}
-	else if (color == Color::Blue) {
-		texture.loadFromFile("Blocks\\blue_block.png");
+	else if (color == Color::Green) {
+		texture.loadFromFile("Blocks\\green_cell.png");
+	}
+	else if (color == Color::Red) {
+		texture.loadFromFile("Blocks\\red_cell.png");
+	}
+	else if (color == Color::Yellow) {
+		texture.loadFromFile("Blocks\\yellow_cell.png");
+	}
+	else if (color == Color::Cyan) {
+		texture.loadFromFile("Blocks\\orange_cell.png");
+	}
+	else if (color == Color::Magenta) {
+		texture.loadFromFile("Blocks\\purple_cell.png");
 	}
 	
 	underControl = true;
