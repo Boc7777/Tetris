@@ -7,26 +7,6 @@
       "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_S.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_S.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_Z.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_Z.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_T.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_T.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -39,27 +19,27 @@
       "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\TetrisBlock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\TetrisBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_I.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Block_I.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Cell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\TetrisBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\48664\\Desktop\\geirka\\gierka\\gierka\\Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\48664\\Desktop\\geirka\\gierka\\gierka\\Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|C:\\Users\\48664\\Desktop\\tetris\\tetris\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91813A63-881F-4709-8759-4AE173B31DD7}|tetris\\tetris.vcxproj|solutionrelative:tetris\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\48664\\Desktop\\sort\\sort\\sort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -81,60 +61,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 385,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Block_S.cpp",
-              "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.cpp",
-              "RelativeDocumentMoniker": "tetris\\Block_S.cpp",
-              "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.cpp",
-              "RelativeToolTip": "tetris\\Block_S.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-28T15:02:45.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Block_S.h",
-              "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.h",
-              "RelativeDocumentMoniker": "tetris\\Block_S.h",
-              "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_S.h",
-              "RelativeToolTip": "tetris\\Block_S.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-28T15:02:39.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Block_Z.cpp",
-              "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.cpp",
-              "RelativeDocumentMoniker": "tetris\\Block_Z.cpp",
-              "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.cpp",
-              "RelativeToolTip": "tetris\\Block_Z.cpp",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAIwKEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-28T14:56:13.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Block_Z.h",
-              "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.h",
-              "RelativeDocumentMoniker": "tetris\\Block_Z.h",
-              "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_Z.h",
-              "RelativeToolTip": "tetris\\Block_Z.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAIwDAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-28T14:56:09.325Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -143,53 +71,53 @@
               "RelativeDocumentMoniker": "tetris\\tetris.cpp",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\tetris.cpp",
               "RelativeToolTip": "tetris\\tetris.cpp",
-              "ViewState": "AQIAAJIAAAAAAAAAAAAAAMUAAAAJAAAA",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAAAMsAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-16T09:20:03.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "TetrisBlock.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.cpp",
               "RelativeDocumentMoniker": "tetris\\TetrisBlock.cpp",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.cpp",
               "RelativeToolTip": "tetris\\TetrisBlock.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-26T08:32:02.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "TetrisBlock.h",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.h",
               "RelativeDocumentMoniker": "tetris\\TetrisBlock.h",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\TetrisBlock.h",
               "RelativeToolTip": "tetris\\TetrisBlock.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-07-11T16:25:39.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Cell.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.cpp",
               "RelativeDocumentMoniker": "tetris\\Cell.cpp",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.cpp",
               "RelativeToolTip": "tetris\\Cell.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-06T15:19:56.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "Cell.h",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Cell.h",
               "RelativeDocumentMoniker": "tetris\\Cell.h",
@@ -202,20 +130,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Block_T.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_T.cpp",
               "RelativeDocumentMoniker": "tetris\\Block_T.cpp",
               "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_T.cpp",
               "RelativeToolTip": "tetris\\Block_T.cpp",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAIwOcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAOcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-28T08:10:01.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Block_T.h",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_T.h",
               "RelativeDocumentMoniker": "tetris\\Block_T.h",
@@ -228,20 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Block_I.h",
-              "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_I.h",
-              "RelativeDocumentMoniker": "tetris\\Block_I.h",
-              "ToolTip": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\Block_I.h",
-              "RelativeToolTip": "tetris\\Block_I.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAIwBkAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-07T08:44:21.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Board.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\board.cpp",
               "RelativeDocumentMoniker": "tetris\\board.cpp",
@@ -249,12 +164,11 @@
               "RelativeToolTip": "tetris\\board.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-06T14:57:04.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T14:57:04.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Board.h",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\tetris\\tetris\\board.h",
               "RelativeDocumentMoniker": "tetris\\board.h",
@@ -262,8 +176,7 @@
               "RelativeToolTip": "tetris\\board.h",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-06T14:54:54.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T14:54:54.281Z"
             }
           ]
         },
@@ -273,7 +186,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "Block.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\geirka\\gierka\\gierka\\Block.cpp",
               "RelativeDocumentMoniker": "..\\geirka\\gierka\\gierka\\Block.cpp",
@@ -286,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 12,
               "Title": "SortedUnit.h",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\sort\\sort\\SortedUnit.h",
               "RelativeDocumentMoniker": "..\\sort\\sort\\SortedUnit.h",
@@ -298,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 10,
               "Title": "sort.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\sort\\sort\\sort.cpp",
               "RelativeDocumentMoniker": "..\\sort\\sort\\sort.cpp",
@@ -310,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 13,
               "Title": "SortedUnit.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\sort\\sort\\SortedUnit.cpp",
               "RelativeDocumentMoniker": "..\\sort\\sort\\SortedUnit.cpp",
@@ -322,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 11,
               "Title": "paddle.cpp",
               "DocumentMoniker": "C:\\Users\\48664\\Desktop\\geirka\\gierka\\gierka\\paddle.cpp",
               "RelativeDocumentMoniker": "..\\geirka\\gierka\\gierka\\paddle.cpp",

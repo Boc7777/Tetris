@@ -162,3 +162,7 @@ bool TetrisBlock::colisionChecker(vector<Vector2f> cells_to_check, vector<Tetris
 	}
 	return true;
 }
+
+bool TetrisBlock::getBlocktoDelete(){
+	return getTabCells().empty();
+}

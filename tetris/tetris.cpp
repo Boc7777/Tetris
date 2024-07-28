@@ -26,6 +26,14 @@ int score = 0;
 vector<int> cells_in_rows;
 
 bool game_on = true;
+bool spaceChecker = true;
+
+void DeleteUselessBlock() {
+    blocks_tab.erase(
+        remove_if(blocks_tab.begin(), blocks_tab.end(),
+            [](TetrisBlock* obj) { return obj->getBlocktoDelete(); }),
+        blocks_tab.end());
+}
 
 void Check_game_over() {
     for (TetrisBlock* block : blocks_tab) {
@@ -167,6 +175,9 @@ int main()
             
             //sprawdzanie czy gracz nie przegrał
             Check_game_over();
+
+            //usuwanie zbednych klocków
+            DeleteUselessBlock();
         }
 
         //spadanie
@@ -188,6 +199,21 @@ int main()
                     block->movement_X();
             }
             clock_X.restart();
+        }
+
+        //spadanie odrazu na doł po spacji
+        if (Keyboard::isKeyPressed(Keyboard::Key::Space) && game_on && spaceChecker) {
+            spaceChecker = false;
+            for (int i = 0; i < 25; i++) {
+                for (TetrisBlock* block : blocks_tab) {
+                    block->movement_X();
+                    block->checkUnderCells();
+                    block->moveDownCells();
+                }
+            }
+        }
+        else if (!Keyboard::isKeyPressed(Keyboard::Key::Space)) {
+            spaceChecker = true;
         }
 
         //rotejtowanie
