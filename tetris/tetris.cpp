@@ -28,6 +28,10 @@ vector<int> cells_in_rows;
 bool game_on = true;
 bool spaceChecker = true;
 
+bool isXKeyPressed = false;
+
+float Movement_X_Delay = 800;
+
 void DeleteUselessBlock() {
     blocks_tab.erase(
         remove_if(blocks_tab.begin(), blocks_tab.end(),
@@ -139,6 +143,7 @@ int main()
 
     Clock clock_X;
     Clock clock_Y;
+    Clock clock_pressed_X;
 
     srand(time(0));
     Event event;
@@ -148,12 +153,14 @@ int main()
     while (window.isOpen() ) {
 
         window.clear(Color::Black);
+
         //rysowanie boarda i drawRightPanel
         window.draw(board);
         board.DrawRightPanel();
 
         Time Move_X_timer = clock_X.getElapsedTime();
         Time Move_Y_timer = clock_Y.getElapsedTime();
+        Time Pressed_X_timer = clock_pressed_X.getElapsedTime();
 
 
         while (window.pollEvent(event)) {
@@ -181,10 +188,9 @@ int main()
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 200 - board.getLevel()*10 && game_on) {
+        if (Move_Y_timer.asMilliseconds() >= 400 - board.getLevel()*10 && game_on) {
 
             for (TetrisBlock* block : blocks_tab) {
-                    block->movement_X();
                     block->checkUnderCells();
                     block->moveDownCells();
             }
@@ -192,14 +198,35 @@ int main()
   
         }
 
+        
+      
         //poruszanie prawo lewo 
-        if (Move_X_timer.asMilliseconds() >= 300 && (Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
-
-            for (TetrisBlock* block : blocks_tab) {
-                    block->movement_X();
+        if ((Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
+            isXKeyPressed = true;
+            
+            if (Pressed_X_timer.asMilliseconds() > 400) {
+                Movement_X_Delay = 50;
             }
-            clock_X.restart();
+
+
+            if (Move_X_timer.asMilliseconds() >= Movement_X_Delay) {
+                for (TetrisBlock* block : blocks_tab) {
+                    block->movement_X();
+                }
+                clock_X.restart();
+            }
+
+            Movement_X_Delay = 800;
+            
         }
+
+        if (!Keyboard::isKeyPressed(Keyboard::Key::Left) && !Keyboard::isKeyPressed(Keyboard::Key::Right)){
+            isXKeyPressed = false;
+            Movement_X_Delay = 0;
+            clock_pressed_X.restart();
+        }
+
+
 
         //spadanie odrazu na doł po spacji
         if (Keyboard::isKeyPressed(Keyboard::Key::Space) && game_on && spaceChecker) {
