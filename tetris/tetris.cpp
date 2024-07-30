@@ -32,6 +32,7 @@ bool isXKeyPressed = false;
 
 float Movement_X_Delay = 800;
 
+//usuwanie bloku gdy nie ma już cells
 void DeleteUselessBlock() {
     blocks_tab.erase(
         remove_if(blocks_tab.begin(), blocks_tab.end(),
@@ -39,6 +40,7 @@ void DeleteUselessBlock() {
         blocks_tab.end());
 }
 
+//sprawdzanie czy gracz przegral
 void Check_game_over() {
     for (TetrisBlock* block : blocks_tab) {
         for (auto& external_cell : block->getTabCells()) {
@@ -49,6 +51,7 @@ void Check_game_over() {
     }
 }
 
+//sprawdzanie czy linia zostało ulozona i usuwanie jej 
 void Check_line(Board &board) {
     cells_in_rows.clear();
 
@@ -97,6 +100,7 @@ void Check_line(Board &board) {
     }
 }
 
+//sprawdznaie czy blok juz updal 
 bool Check_generate_moment() {
     for (TetrisBlock* block : blocks_tab) {
         vector<Cell> cells_of_block = block->getTabCells();
@@ -158,18 +162,10 @@ int main()
         window.draw(board);
         board.DrawRightPanel();
 
+
         Time Move_X_timer = clock_X.getElapsedTime();
         Time Move_Y_timer = clock_Y.getElapsedTime();
         Time Pressed_X_timer = clock_pressed_X.getElapsedTime();
-
-
-        while (window.pollEvent(event)) {
-
-            if (event.type == Event::Closed) {
-                window.close();
-            }
-        }
-
 
         //jezeli jakis upadł generuje sie nastepny i sprawdzana jest linia i game over 
         if (Check_generate_moment() && game_on) {
@@ -188,7 +184,7 @@ int main()
         }
 
         //spadanie
-        if (Move_Y_timer.asMilliseconds() >= 400 - board.getLevel()*10 && game_on) {
+        if (Move_Y_timer.asMilliseconds() >= 400 - board.getLevel()*40 && game_on) {
 
             for (TetrisBlock* block : blocks_tab) {
                     block->checkUnderCells();
@@ -198,8 +194,6 @@ int main()
   
         }
 
-        
-      
         //poruszanie prawo lewo 
         if ((Keyboard::isKeyPressed(Keyboard::Key::Left) || Keyboard::isKeyPressed(Keyboard::Key::Right) && game_on)){
             isXKeyPressed = true;
@@ -219,14 +213,12 @@ int main()
             Movement_X_Delay = 800;
             
         }
-
-        if (!Keyboard::isKeyPressed(Keyboard::Key::Left) && !Keyboard::isKeyPressed(Keyboard::Key::Right)){
+        else if (!Keyboard::isKeyPressed(Keyboard::Key::Left) && !Keyboard::isKeyPressed(Keyboard::Key::Right)){
             isXKeyPressed = false;
             Movement_X_Delay = 0;
             clock_pressed_X.restart();
         }
-
-
+        
 
         //spadanie odrazu na doł po spacji
         if (Keyboard::isKeyPressed(Keyboard::Key::Space) && game_on && spaceChecker) {
@@ -255,6 +247,7 @@ int main()
             block->drawCells();
         }
      
+        //rysowanie ekranu koncowego 
         if (!game_on) {
             board.DrawGameOver();
 
@@ -262,6 +255,13 @@ int main()
                 board.updateData(0);
                 blocks_tab.clear();
                 game_on = true;
+            }
+        }
+
+        while (window.pollEvent(event)) {
+
+            if (event.type == Event::Closed) {
+                window.close();
             }
         }
 
