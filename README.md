@@ -1,5 +1,5 @@
 Simple Tetris <br>
-I used polymorphism to create the blocks <br>
+I used polymorphism to create blocks <br>
 Game has score and level counter <br>
 score%100+1 = level <br>
 as higher level as faster game <br> 
