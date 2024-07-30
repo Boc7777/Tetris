@@ -1,4 +1,4 @@
-Simple Tetris 
+Simple Tetris <\n>
 I used polymorphism to create the blocks
 Game has score and level counter 
 score%100+1 = level 
